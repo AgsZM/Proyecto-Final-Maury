@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Finanzas Personales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestor de Finanzas Personales</h1>
+
+    <div class="form-container">
+        <input type="text" id="concept" placeholder="Concepto">
+        <input type="number" id="amount" placeholder="Monto">
+        <select id="type">
+            <option value="income">Ingreso</option>
+            <option value="expense">Gasto</option>
+        </select>
+        <button id="add-transaction">Agregar</button>
+    </div>
+
+    <h2>Resumen</h2>
+    <div id="summary">
+        <p>Ingresos totales: <span id="total-income">$0</span></p>
+        <p>Gastos totales: <span id="total-expense">$0</span></p>
+        <p>Saldo actual: <span id="current-balance">$0</span></p>
+    </div>
+
+    <h2>Historial de Transacciones</h2>
+    <div id="transaction-history"></div>
+
+    <canvas id="chart"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
